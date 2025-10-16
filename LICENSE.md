@@ -1,19 +1,12 @@
-# NV Page Open License
+# NV Page Personal License
 
-NV Page is fully open and customizable. You are free to:
-- Use it for personal, professional, or commercial purposes
-- Copy, modify, merge, fork, and redistribute the project
-- Adapt the layout, code, and assets as you wish
+This version of NV Page is strictly personal and private.  
 
-## EXCEPTIONS
-The following items are NOT covered by this license:
-- Certain symbols included in the project
-- The music track included in the project
+You are NOT allowed to:  
+- Copy, redistribute, or share this project  
+- Modify, merge, or fork the code in any way  
+- Use it for any purpose other than personal use by the designated owners  
 
-These assets belong to their respective copyright holders and may not be
-reused, redistributed, or modified without permission from their owners.
+This project is provided AS IS, and any misuse or unauthorized distribution is strictly prohibited.  
 
-## DISCLAIMER
-The Project is provided "AS IS", without warranty of any kind. The authors
-are not responsible for any damage, data loss, or legal issues arising from
-its use.
+All rights are reserved to the designated owners.  
