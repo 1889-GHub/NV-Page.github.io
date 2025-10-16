@@ -13,8 +13,8 @@
   --Muted: #c7c7c7;
   --Card-Bg: rgba(255,255,255,0.03);
   --Glass-Border: rgba(255,255,255,0.06);
-  --V-Background: url('../V_Folder/V_Background.gif');
-  --N-Background: url('../N_Folder/N_Background.gif');
+  --V-Background: url('V_Folder/V_Background.gif');
+  --N-Background: url('N_Folder/N_Background.gif');
   --V-Gradient-Start: #606060;
   --V-Gradient-End: #404040;
   --N-Gradient-Start: #a00000;
