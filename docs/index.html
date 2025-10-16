@@ -1,0 +1,194 @@
+<!-- AÇIK DÜZENLENMEYE İZİN VERİLMİŞ 1889 BİLEŞENİ. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title> <!-- Your Page Name <title>Here</title> -->
+
+    <link rel="icon" type="image/png" href=""> <!-- href="Your Page Icon File Path Here" -->
+
+    <link rel="stylesheet" href="style.css"> <!-- href="Your Style .css File Path Here" -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+
+
+<body>
+    <audio id="Background-Music" loop>
+
+        <source src="" type="audio/mpeg"> <!-- <source src="Your Music .mp3 File Path Here" -->
+
+    </audio>
+
+
+
+
+    <header class="App-Header">
+
+        <img src="Path/To/Your/Logo.png" alt="Logo" class="Header-Logo"> <!-- <img src="Your .png Transparent Background Icon Path Here" -->
+
+    </header>
+
+
+
+
+    <div class="Main-Viewport">
+
+        <div class="Person-Column" id="M1_Column">
+
+            <div class="Person-Frame">
+
+                <div class="Person-Avatar" style="background-image: url('Path/To/M1/Avatar.jpg');"></div>
+                <div class="Person-Name">M1 Name</div>
+                <div class="Bio-Block" id="M1_Bio"></div>
+                <div class="Buttons-Stack">
+
+
+                    <button class="Action-Button M1-Button" id="M1_Button_1">
+                        <span class="Button-Text">Button 1 Name</span>
+                    </button>
+
+
+                    <button class="Action-Button M1-Button" id="M1_Button_2">
+                        <span class="Button-Text">Button 2 Name</span>
+                    </button>
+
+
+                    <button class="Action-Button M1-Button" id="M1_Button_3">
+                        <span class="Button-Text">Button 3 Name</span>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="Person-Column" id="M2_Column">
+            <div class="Person-Frame">
+
+                <div class="Person-Avatar" style="background-image: url('Path/To/M2/Avatar.jpg');"></div>
+
+                <div class="Person-Name">M2 Name</div> 
+
+                <div class="Bio-Block" id="M2_Bio"></div>
+
+                <div class="Buttons-Stack">
+
+
+                    <button class="Action-Button M2-Button" id="M2_Button_1">
+                        <span class="Button-Text">Button 1 Name</span>
+                    </button>
+
+
+                    <button class="Action-Button M2-Button" id="M2_Button_2">
+                        <span class="Button-Text">Button 2 Name</span>
+                    </button>
+
+
+                    <button class="Action-Button M2-Button" id="M2_Button_3">
+                        <span class="Button-Text">Button 3 Name</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        const M1_Bio_Text = ""; // Member 1 Bio Here
+
+        Set_Bio_Text("M1_Bio", M1_Bio_Text);
+
+        const M1_Button_1_Link = ""; // Member 1 Button 1 Link Here
+        const M1_Button_2_Link = ""; // Member 1 Button 2 Link Here
+        const M1_Button_3_Link = ""; // Member 1 Button 3 Link Here
+
+
+
+
+        const M2_Bio_Text = ""; // Member 2 Bio Here
+
+        Set_Bio_Text("M2_Bio", M2_Bio_Text);
+
+        const M2_Button_1_Link = ""; // Member 2 Button 1 Link Here
+        const M2_Button_2_Link = ""; // Member 2 Button 2 Link Here
+        const M2_Button_3_Link = ""; // Member 2 Button 3 Link Here
+
+
+
+
+        function Set_Bio_Text(Element_Id, Bio_Text) {
+            document.getElementById(Element_Id).innerText = Bio_Text;
+        }
+
+
+
+
+        function Redirect_To_Url(Url) {
+            window.open(Url, '_blank');
+        }
+
+
+
+
+        function Start_Music() {
+            const Music = document.getElementById('Background-Music');
+            Music.volume = 0.3;
+            Music.play().catch(error => {
+                console.log('Music autoplay prevented:', error);
+            });
+        }
+
+
+
+
+        document.body.addEventListener('click', Start_Music, { once: true });
+        document.body.addEventListener('touchstart', Start_Music, { once: true });
+
+
+
+
+        document.getElementById("M1_Button_1").addEventListener("click", () => Redirect_To_Url(M1_Button_1_Link));
+        document.getElementById("M1_Button_2").addEventListener("click", () => Redirect_To_Url(M1_Button_2_Link));
+        document.getElementById("M1_Button_3").addEventListener("click", () => Redirect_To_Url(M1_Button_3_Link));
+
+
+
+
+        document.getElementById("M2_Button_1").addEventListener("click", () => Redirect_To_Url(M2_Button_1_Link));
+        document.getElementById("M2_Button_2").addEventListener("click", () => Redirect_To_Url(M2_Button_2_Link));
+        document.getElementById("M2_Button_3").addEventListener("click", () => Redirect_To_Url(M2_Button_3_Link));
+
+
+
+
+    </script>
+
+</body>
+
+</html>
