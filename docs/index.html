@@ -1,0 +1,225 @@
+<!-- BU BİR 1889 BİLEŞENİDİR TAMAMEN TIPA TIP KOPYALANMASI YASAKTIR. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1889 SPECIALS</title>
+
+    <link rel="icon" type="image/png" href=../IENA/1889.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+
+
+
+<body>
+    <audio id="Background-Music" loop>
+
+        <source src="../Music/NV.mp3" type="audio/mpeg">
+
+    </audio>
+
+
+
+
+    <header class="App-Header">
+
+        <img src="../IENA/1889.png" alt="1889" class="Header-Logo">
+
+    </header>
+
+
+
+
+    <div class="Main-Viewport">
+
+        <div class="Person-Column" id="V_Column">
+
+            <div class="Person-Frame">
+
+                <div class="Person-Avatar" style="background-image: url('../V_Folder/Vinnie.jpg');"></div>
+                <div class="Person-Name">Fierce "Vinnie" Competitor</div>
+                <div class="Bio-Block" id="V_Bio"></div>
+                <div class="Buttons-Stack">
+
+
+                    <button class="Action-Button V-Button" id="V_Button_1">
+                        <i class="fab fa-instagram"></i>
+                        <span class="Button-Text">Instagram</span>
+                    </button>
+
+
+                    <button class="Action-Button V-Button" id="V_Button_2">
+                        <i class="fas fa-music"></i>
+                        <span class="Button-Text">Yeat</span>
+                    </button>
+
+
+                    <button class="Action-Button V-Button" id="V_Button_3">
+                        <i class="fab fa-github"></i>
+                        <span class="Button-Text">Github</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="Person-Column" id="N_Column">
+
+            <div class="Person-Frame">
+
+                <div class="Person-Avatar" style="background-image: url('../N_Folder/Nishel.jpg');"></div>
+                <div class="Person-Name">Nishel</div>
+                <div class="Bio-Block" id="N_Bio"></div>
+                <div class="Buttons-Stack">
+
+
+                    <button class="Action-Button N-Button" id="N_Button_1">
+                        <i class="fab fa-instagram"></i>
+                        <span class="Button-Text">Instagram</span>
+                    </button>
+
+
+                    <button class="Action-Button N-Button" id="N_Button_2">
+                        <i class="fab fa-spotify"></i>
+                        <span class="Button-Text">Spotify</span>
+                    </button>
+
+
+                    <button class="Action-Button N-Button" id="N_Button_3">
+                        <i class="fab fa-pinterest"></i>
+                        <span class="Button-Text">Pinterest</span>
+                    </button>
+
+
+                    <button class="Action-Button N-Button" id="N_Button_4">
+                        <i class="fab fa-tiktok"></i>
+                        <span class="Button-Text">Tiktok</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <button class="Action-Button V-Button" id="V_Button_Message">
+        <span class="Button-Text">Vinnie Notes</span>
+    </button>
+
+
+
+
+    <button class="Action-Button N-Button" id="N_Button_Message">
+        <span class="Button-Text">Nishel Notes</span>
+    </button>
+
+
+
+
+    <script>
+        const V_Bio_Text = "⚫; #VN. / #NT. Ich Seh Dich Sterben";
+        Set_Bio_Text("V_Bio", V_Bio_Text);
+        const V_Button_1_Link = "https://www.instagram.com/0001.vinnie/";
+        const V_Button_2_Link = "https://music.youtube.com/watch?v=TroymF8_WAo";
+        const V_Button_3_Link = "https://github.com/0001-Vinnie";
+
+
+
+        const N_Bio_Text = "🦋; #NV. / #DT. Kendini utandırıyorsun. Bazı insanlar diğerlerinden daha iyidir.";
+        Set_Bio_Text("N_Bio", N_Bio_Text);
+        const N_Button_1_Link = "https://www.instagram.com/0005.nishel/";
+        const N_Button_2_Link = "https://open.spotify.com/user/31ue23cku6papytwlgvmkqzmvhme?si=p1-697N8Q5yFjzRHMehl0A";
+        const N_Button_3_Link = "https://pin.it/tcxnxQwHT";
+        const N_Button_4_Link = "https://www.tiktok.com/@msnishel";
+
+
+
+
+        function Set_Bio_Text(Element_Id, Bio_Text) {
+            document.getElementById(Element_Id).innerText = Bio_Text;
+        }
+
+
+
+
+        function Redirect_To_Url(Url) {
+            window.open(Url, '_blank');
+        }
+
+
+
+
+        function Start_Music() {
+            const Music = document.getElementById('Background-Music');
+
+            Music.volume = 0.3;
+
+            Music.play().catch(error => {
+                console.log('Music autoplay prevented:', error);
+            });
+
+        }
+
+
+
+
+        document.body.addEventListener('click', Start_Music, { once: true });
+        document.body.addEventListener('touchstart', Start_Music, { once: true });
+
+
+
+
+        document.getElementById("V_Button_1").addEventListener("click", () => Redirect_To_Url(V_Button_1_Link));
+        document.getElementById("V_Button_2").addEventListener("click", () => Redirect_To_Url(V_Button_2_Link));
+        document.getElementById("V_Button_3").addEventListener("click", () => Redirect_To_Url(V_Button_3_Link));
+        document.getElementById("V_Button_Message").addEventListener("click", () => window.location.href = "../Message/V_Message.html");
+
+
+
+
+        document.getElementById("N_Button_1").addEventListener("click", () => Redirect_To_Url(N_Button_1_Link));
+        document.getElementById("N_Button_2").addEventListener("click", () => Redirect_To_Url(N_Button_2_Link));
+        document.getElementById("N_Button_3").addEventListener("click", () => Redirect_To_Url(N_Button_3_Link));
+        document.getElementById("N_Button_4").addEventListener("click", () => Redirect_To_Url(N_Button_4_Link));
+        document.getElementById("N_Button_Message").addEventListener("click", () => window.location.href = "../Message/N_Message.html");
+
+
+
+
+    </script>
+
+</body>
+
+</html>
